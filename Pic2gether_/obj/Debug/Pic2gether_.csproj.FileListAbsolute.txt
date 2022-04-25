@@ -8,3 +8,13 @@ C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Pic2gether\Pic2g
 C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Pic2gether\Pic2gether_\Pic2gether_\bin\Debug\Pic2gether_.pdb
 C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Pic2gether\Pic2gether_\Pic2gether_\obj\Debug\Pic2gether_.exe
 C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Pic2gether\Pic2gether_\Pic2gether_\obj\Debug\Pic2gether_.pdb
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\bin\Debug\Pic2gether_.exe.config
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\bin\Debug\Pic2gether_.exe
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\bin\Debug\Pic2gether_.pdb
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.csprojAssemblyReference.cache
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.Form1.resources
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.Properties.Resources.resources
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.csproj.GenerateResource.cache
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.csproj.CoreCompileInputs.cache
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.exe
+C:\Users\rapun\OneDrive\Desktop\Универ\3КУРС\ТРПО\Курсовая\Pic2gether_\obj\Debug\Pic2gether_.pdb
