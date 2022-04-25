@@ -37,6 +37,16 @@ namespace Pic2gether_
                 BColore.BackColor = color;
                 pencil.Color = color;
             }
+
+        }
+        private void BColorLilChange(object sender, EventArgs e)
+        {
+            if (ChColor.ShowDialog() == DialogResult.OK)
+            {
+                Color color = ChColor.Color;
+                BColorLil.BackColor = color;
+                pencil.Color = color;
+            }
         }
 
         private void Canva_MouseDown(object sender, MouseEventArgs e)
@@ -75,6 +85,8 @@ namespace Pic2gether_
                     px = e.Location;
                     g.DrawLine(erase, px, py);
                     py = px;
+
+                    
                 }
             }
             Canva.Refresh();

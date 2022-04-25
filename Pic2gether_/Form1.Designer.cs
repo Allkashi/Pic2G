@@ -45,6 +45,7 @@ namespace Pic2gether_
             this.NColor = new System.Windows.Forms.Label();
             this.ZoomPanel = new System.Windows.Forms.Panel();
             this.Canva = new System.Windows.Forms.PictureBox();
+            this.BColorLil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -71,6 +72,7 @@ namespace Pic2gether_
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.BColorLil);
             this.splitContainer1.Panel2.Controls.Add(this.NText);
             this.splitContainer1.Panel2.Controls.Add(this.BText);
             this.splitContainer1.Panel2.Controls.Add(this.NSelect);
@@ -91,7 +93,7 @@ namespace Pic2gether_
             // 
             this.NText.AutoSize = true;
             this.NText.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NText.Location = new System.Drawing.Point(306, 53);
+            this.NText.Location = new System.Drawing.Point(338, 53);
             this.NText.Name = "NText";
             this.NText.Size = new System.Drawing.Size(37, 13);
             this.NText.TabIndex = 11;
@@ -104,7 +106,7 @@ namespace Pic2gether_
             this.BText.BackgroundImage = global::Pic2gether_.Properties.Resources.Text;
             this.BText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BText.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BText.Location = new System.Drawing.Point(305, 10);
+            this.BText.Location = new System.Drawing.Point(337, 10);
             this.BText.Name = "BText";
             this.BText.Size = new System.Drawing.Size(40, 40);
             this.BText.TabIndex = 10;
@@ -114,7 +116,7 @@ namespace Pic2gether_
             // 
             this.NSelect.AutoSize = true;
             this.NSelect.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NSelect.Location = new System.Drawing.Point(243, 53);
+            this.NSelect.Location = new System.Drawing.Point(275, 53);
             this.NSelect.Name = "NSelect";
             this.NSelect.Size = new System.Drawing.Size(57, 13);
             this.NSelect.TabIndex = 9;
@@ -127,7 +129,7 @@ namespace Pic2gether_
             this.BSelect.BackgroundImage = global::Pic2gether_.Properties.Resources.Dotted;
             this.BSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BSelect.Location = new System.Drawing.Point(250, 10);
+            this.BSelect.Location = new System.Drawing.Point(282, 10);
             this.BSelect.Name = "BSelect";
             this.BSelect.Size = new System.Drawing.Size(40, 40);
             this.BSelect.TabIndex = 8;
@@ -137,7 +139,7 @@ namespace Pic2gether_
             // 
             this.NErase.AutoSize = true;
             this.NErase.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NErase.Location = new System.Drawing.Point(192, 53);
+            this.NErase.Location = new System.Drawing.Point(224, 53);
             this.NErase.Name = "NErase";
             this.NErase.Size = new System.Drawing.Size(44, 13);
             this.NErase.TabIndex = 7;
@@ -150,7 +152,7 @@ namespace Pic2gether_
             this.BErase.BackgroundImage = global::Pic2gether_.Properties.Resources.Erase;
             this.BErase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BErase.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BErase.Location = new System.Drawing.Point(194, 10);
+            this.BErase.Location = new System.Drawing.Point(226, 10);
             this.BErase.Name = "BErase";
             this.BErase.Size = new System.Drawing.Size(40, 40);
             this.BErase.TabIndex = 6;
@@ -161,7 +163,7 @@ namespace Pic2gether_
             // 
             this.NPen.AutoSize = true;
             this.NPen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NPen.Location = new System.Drawing.Point(137, 53);
+            this.NPen.Location = new System.Drawing.Point(169, 53);
             this.NPen.Name = "NPen";
             this.NPen.Size = new System.Drawing.Size(36, 13);
             this.NPen.TabIndex = 5;
@@ -174,7 +176,7 @@ namespace Pic2gether_
             this.BPen.BackgroundImage = global::Pic2gether_.Properties.Resources.Pen;
             this.BPen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BPen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BPen.Location = new System.Drawing.Point(136, 10);
+            this.BPen.Location = new System.Drawing.Point(168, 10);
             this.BPen.Name = "BPen";
             this.BPen.Size = new System.Drawing.Size(40, 40);
             this.BPen.TabIndex = 4;
@@ -185,7 +187,7 @@ namespace Pic2gether_
             // 
             this.NFill.AutoSize = true;
             this.NFill.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NFill.Location = new System.Drawing.Point(70, 53);
+            this.NFill.Location = new System.Drawing.Point(102, 53);
             this.NFill.Name = "NFill";
             this.NFill.Size = new System.Drawing.Size(50, 13);
             this.NFill.TabIndex = 3;
@@ -198,7 +200,7 @@ namespace Pic2gether_
             this.BFill.BackgroundImage = global::Pic2gether_.Properties.Resources.Fill1;
             this.BFill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BFill.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BFill.Location = new System.Drawing.Point(74, 10);
+            this.BFill.Location = new System.Drawing.Point(106, 10);
             this.BFill.Name = "BFill";
             this.BFill.Size = new System.Drawing.Size(40, 40);
             this.BFill.TabIndex = 2;
@@ -238,6 +240,16 @@ namespace Pic2gether_
             this.Canva.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseMove);
             this.Canva.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseUp);
             // 
+            // BColorLil
+            // 
+            this.BColorLil.BackColor = System.Drawing.Color.White;
+            this.BColorLil.Location = new System.Drawing.Point(55, 30);
+            this.BColorLil.Name = "BColorLil";
+            this.BColorLil.Size = new System.Drawing.Size(20, 20);
+            this.BColorLil.TabIndex = 12;
+            this.BColorLil.UseVisualStyleBackColor = false;
+            this.BColorLil.Click += new System.EventHandler(this.BColorLilChange);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +286,7 @@ namespace Pic2gether_
         private System.Windows.Forms.Label NSelect;
         private System.Windows.Forms.Label NText;
         private System.Windows.Forms.Button BText;
+        private System.Windows.Forms.Button BColorLil;
     }
 }
 
