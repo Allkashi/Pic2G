@@ -32,10 +32,20 @@ namespace Pic2gether_
             this.ChColor = new System.Windows.Forms.ColorDialog();
             this.BColore = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bVisibility = new System.Windows.Forms.Button();
+            this.bLine = new System.Windows.Forms.Button();
+            this.bRectangle = new System.Windows.Forms.Button();
+            this.bCircle = new System.Windows.Forms.Button();
+            this.bSquare = new System.Windows.Forms.Button();
+            this.bEllipse = new System.Windows.Forms.Button();
+            this.bClear = new System.Windows.Forms.Button();
+            this.bSave = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BColorLil = new System.Windows.Forms.Button();
             this.NText = new System.Windows.Forms.Label();
             this.BText = new System.Windows.Forms.Button();
-            this.NSelect = new System.Windows.Forms.Label();
-            this.BSelect = new System.Windows.Forms.Button();
             this.NErase = new System.Windows.Forms.Label();
             this.BErase = new System.Windows.Forms.Button();
             this.NPen = new System.Windows.Forms.Label();
@@ -45,8 +55,8 @@ namespace Pic2gether_
             this.NColor = new System.Windows.Forms.Label();
             this.ZoomPanel = new System.Windows.Forms.Panel();
             this.Canva = new System.Windows.Forms.PictureBox();
-            this.BColorLil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Canva)).BeginInit();
@@ -70,13 +80,25 @@ namespace Pic2gether_
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.bVisibility);
+            this.splitContainer1.Panel1.Controls.Add(this.bLine);
+            this.splitContainer1.Panel1.Controls.Add(this.bRectangle);
+            this.splitContainer1.Panel1.Controls.Add(this.bCircle);
+            this.splitContainer1.Panel1.Controls.Add(this.bSquare);
+            this.splitContainer1.Panel1.Controls.Add(this.bEllipse);
+            // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.bClear);
+            this.splitContainer1.Panel2.Controls.Add(this.bSave);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel2.Controls.Add(this.BColorLil);
             this.splitContainer1.Panel2.Controls.Add(this.NText);
             this.splitContainer1.Panel2.Controls.Add(this.BText);
-            this.splitContainer1.Panel2.Controls.Add(this.NSelect);
-            this.splitContainer1.Panel2.Controls.Add(this.BSelect);
             this.splitContainer1.Panel2.Controls.Add(this.NErase);
             this.splitContainer1.Panel2.Controls.Add(this.BErase);
             this.splitContainer1.Panel2.Controls.Add(this.NPen);
@@ -89,11 +111,168 @@ namespace Pic2gether_
             this.splitContainer1.SplitterDistance = 523;
             this.splitContainer1.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Прозрачность",
+            "Заливка"});
+            this.comboBox1.Location = new System.Drawing.Point(417, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // bVisibility
+            // 
+            this.bVisibility.BackgroundImage = global::Pic2gether_.Properties.Resources.visibility;
+            this.bVisibility.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bVisibility.Enabled = false;
+            this.bVisibility.Location = new System.Drawing.Point(417, 20);
+            this.bVisibility.Name = "bVisibility";
+            this.bVisibility.Size = new System.Drawing.Size(20, 20);
+            this.bVisibility.TabIndex = 19;
+            this.bVisibility.UseVisualStyleBackColor = true;
+            // 
+            // bLine
+            // 
+            this.bLine.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bLine.BackgroundImage = global::Pic2gether_.Properties.Resources.Line;
+            this.bLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bLine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bLine.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bLine.Location = new System.Drawing.Point(354, 10);
+            this.bLine.Name = "bLine";
+            this.bLine.Size = new System.Drawing.Size(40, 40);
+            this.bLine.TabIndex = 17;
+            this.bLine.UseVisualStyleBackColor = false;
+            this.bLine.Click += new System.EventHandler(this.bLine_Click);
+            // 
+            // bRectangle
+            // 
+            this.bRectangle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bRectangle.BackgroundImage = global::Pic2gether_.Properties.Resources.Rectangle;
+            this.bRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bRectangle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bRectangle.Location = new System.Drawing.Point(288, 10);
+            this.bRectangle.Name = "bRectangle";
+            this.bRectangle.Size = new System.Drawing.Size(40, 40);
+            this.bRectangle.TabIndex = 16;
+            this.bRectangle.UseVisualStyleBackColor = false;
+            this.bRectangle.Click += new System.EventHandler(this.bRectangle_Click);
+            // 
+            // bCircle
+            // 
+            this.bCircle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bCircle.BackgroundImage = global::Pic2gether_.Properties.Resources.Circle;
+            this.bCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bCircle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bCircle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bCircle.Location = new System.Drawing.Point(157, 10);
+            this.bCircle.Name = "bCircle";
+            this.bCircle.Size = new System.Drawing.Size(40, 40);
+            this.bCircle.TabIndex = 15;
+            this.bCircle.UseVisualStyleBackColor = false;
+            this.bCircle.Click += new System.EventHandler(this.bCircle_Click);
+            // 
+            // bSquare
+            // 
+            this.bSquare.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bSquare.BackgroundImage = global::Pic2gether_.Properties.Resources.Square;
+            this.bSquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bSquare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bSquare.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bSquare.Location = new System.Drawing.Point(223, 10);
+            this.bSquare.Name = "bSquare";
+            this.bSquare.Size = new System.Drawing.Size(40, 40);
+            this.bSquare.TabIndex = 14;
+            this.bSquare.UseVisualStyleBackColor = false;
+            this.bSquare.Click += new System.EventHandler(this.bSquare_Click);
+            // 
+            // bEllipse
+            // 
+            this.bEllipse.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bEllipse.BackgroundImage = global::Pic2gether_.Properties.Resources.Ellipse;
+            this.bEllipse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bEllipse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bEllipse.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bEllipse.Location = new System.Drawing.Point(84, 10);
+            this.bEllipse.Name = "bEllipse";
+            this.bEllipse.Size = new System.Drawing.Size(40, 40);
+            this.bEllipse.TabIndex = 13;
+            this.bEllipse.UseVisualStyleBackColor = false;
+            this.bEllipse.Click += new System.EventHandler(this.bEllipse_Click);
+            // 
+            // bClear
+            // 
+            this.bClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bClear.Location = new System.Drawing.Point(489, 38);
+            this.bClear.Name = "bClear";
+            this.bClear.Size = new System.Drawing.Size(114, 22);
+            this.bClear.TabIndex = 17;
+            this.bClear.Text = "Очистить";
+            this.bClear.UseVisualStyleBackColor = true;
+            this.bClear.Click += new System.EventHandler(this.bClear_Click);
+            // 
+            // bSave
+            // 
+            this.bSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bSave.Location = new System.Drawing.Point(489, 10);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(114, 22);
+            this.bSave.TabIndex = 16;
+            this.bSave.Text = "Сохранить";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(351, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 22);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Толщина линии";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1 px",
+            "2 px",
+            "3 px",
+            "5 px",
+            "7 px",
+            "10 px",
+            "20 px",
+            "30 px",
+            "40 px",
+            "50 px",
+            "100 px",
+            "200 px"});
+            this.comboBox2.Location = new System.Drawing.Point(351, 45);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // BColorLil
+            // 
+            this.BColorLil.BackColor = System.Drawing.Color.White;
+            this.BColorLil.Location = new System.Drawing.Point(55, 30);
+            this.BColorLil.Name = "BColorLil";
+            this.BColorLil.Size = new System.Drawing.Size(20, 20);
+            this.BColorLil.TabIndex = 12;
+            this.BColorLil.UseVisualStyleBackColor = false;
+            this.BColorLil.Click += new System.EventHandler(this.BColorLilChange);
+            // 
             // NText
             // 
             this.NText.AutoSize = true;
             this.NText.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NText.Location = new System.Drawing.Point(338, 53);
+            this.NText.Location = new System.Drawing.Point(283, 53);
             this.NText.Name = "NText";
             this.NText.Size = new System.Drawing.Size(37, 13);
             this.NText.TabIndex = 11;
@@ -105,35 +284,14 @@ namespace Pic2gether_
             this.BText.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BText.BackgroundImage = global::Pic2gether_.Properties.Resources.Text;
             this.BText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BText.Enabled = false;
             this.BText.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BText.Location = new System.Drawing.Point(337, 10);
+            this.BText.Location = new System.Drawing.Point(281, 10);
             this.BText.Name = "BText";
             this.BText.Size = new System.Drawing.Size(40, 40);
             this.BText.TabIndex = 10;
             this.BText.UseVisualStyleBackColor = false;
-            // 
-            // NSelect
-            // 
-            this.NSelect.AutoSize = true;
-            this.NSelect.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NSelect.Location = new System.Drawing.Point(275, 53);
-            this.NSelect.Name = "NSelect";
-            this.NSelect.Size = new System.Drawing.Size(57, 13);
-            this.NSelect.TabIndex = 9;
-            this.NSelect.Text = "Выделить";
-            this.NSelect.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // BSelect
-            // 
-            this.BSelect.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BSelect.BackgroundImage = global::Pic2gether_.Properties.Resources.Dotted;
-            this.BSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BSelect.Location = new System.Drawing.Point(282, 10);
-            this.BSelect.Name = "BSelect";
-            this.BSelect.Size = new System.Drawing.Size(40, 40);
-            this.BSelect.TabIndex = 8;
-            this.BSelect.UseVisualStyleBackColor = false;
             // 
             // NErase
             // 
@@ -151,6 +309,7 @@ namespace Pic2gether_
             this.BErase.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BErase.BackgroundImage = global::Pic2gether_.Properties.Resources.Erase;
             this.BErase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BErase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BErase.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BErase.Location = new System.Drawing.Point(226, 10);
             this.BErase.Name = "BErase";
@@ -175,6 +334,7 @@ namespace Pic2gether_
             this.BPen.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BPen.BackgroundImage = global::Pic2gether_.Properties.Resources.Pen;
             this.BPen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BPen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BPen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BPen.Location = new System.Drawing.Point(168, 10);
             this.BPen.Name = "BPen";
@@ -199,12 +359,14 @@ namespace Pic2gether_
             this.BFill.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BFill.BackgroundImage = global::Pic2gether_.Properties.Resources.Fill1;
             this.BFill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BFill.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BFill.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BFill.Location = new System.Drawing.Point(106, 10);
             this.BFill.Name = "BFill";
             this.BFill.Size = new System.Drawing.Size(40, 40);
             this.BFill.TabIndex = 2;
             this.BFill.UseVisualStyleBackColor = false;
+            this.BFill.Click += new System.EventHandler(this.BFill_Click);
             // 
             // NColor
             // 
@@ -229,26 +391,18 @@ namespace Pic2gether_
             // 
             // Canva
             // 
-            this.Canva.BackColor = System.Drawing.Color.White;
+            this.Canva.BackColor = System.Drawing.Color.DimGray;
             this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Canva.Location = new System.Drawing.Point(0, 0);
             this.Canva.Name = "Canva";
             this.Canva.Size = new System.Drawing.Size(1143, 584);
             this.Canva.TabIndex = 0;
             this.Canva.TabStop = false;
+            this.Canva.Paint += new System.Windows.Forms.PaintEventHandler(this.Canva_Paint);
+            this.Canva.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseClick);
             this.Canva.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseDown);
             this.Canva.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseMove);
             this.Canva.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canva_MouseUp);
-            // 
-            // BColorLil
-            // 
-            this.BColorLil.BackColor = System.Drawing.Color.White;
-            this.BColorLil.Location = new System.Drawing.Point(55, 30);
-            this.BColorLil.Name = "BColorLil";
-            this.BColorLil.Size = new System.Drawing.Size(20, 20);
-            this.BColorLil.TabIndex = 12;
-            this.BColorLil.UseVisualStyleBackColor = false;
-            this.BColorLil.Click += new System.EventHandler(this.BColorLilChange);
             // 
             // Form1
             // 
@@ -260,6 +414,7 @@ namespace Pic2gether_
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Canva);
             this.Name = "Form1";
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -282,11 +437,20 @@ namespace Pic2gether_
         private System.Windows.Forms.Label NErase;
         private System.Windows.Forms.Button BErase;
         private System.Windows.Forms.Label NPen;
-        private System.Windows.Forms.Button BSelect;
-        private System.Windows.Forms.Label NSelect;
         private System.Windows.Forms.Label NText;
         private System.Windows.Forms.Button BText;
         private System.Windows.Forms.Button BColorLil;
+        private System.Windows.Forms.Button bLine;
+        private System.Windows.Forms.Button bRectangle;
+        private System.Windows.Forms.Button bCircle;
+        private System.Windows.Forms.Button bSquare;
+        private System.Windows.Forms.Button bEllipse;
+        private System.Windows.Forms.Button bVisibility;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bClear;
+        private System.Windows.Forms.Button bSave;
     }
 }
 

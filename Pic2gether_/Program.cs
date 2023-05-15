@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Text;
+using System.Net;
+using System.Net.Sockets;
+
 namespace Pic2gether_
 {
     static class Program
@@ -20,3 +24,4 @@ namespace Pic2gether_
         }
     }
 }
+
