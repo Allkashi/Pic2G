@@ -32,6 +32,7 @@ namespace Pic2gether_
             this.ChColor = new System.Windows.Forms.ColorDialog();
             this.BColore = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.undo = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bVisibility = new System.Windows.Forms.Button();
             this.bLine = new System.Windows.Forms.Button();
@@ -44,8 +45,6 @@ namespace Pic2gether_
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BColorLil = new System.Windows.Forms.Button();
-            this.NText = new System.Windows.Forms.Label();
-            this.BText = new System.Windows.Forms.Button();
             this.NErase = new System.Windows.Forms.Label();
             this.BErase = new System.Windows.Forms.Button();
             this.NPen = new System.Windows.Forms.Label();
@@ -82,6 +81,7 @@ namespace Pic2gether_
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.undo);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.bVisibility);
             this.splitContainer1.Panel1.Controls.Add(this.bLine);
@@ -97,8 +97,6 @@ namespace Pic2gether_
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel2.Controls.Add(this.BColorLil);
-            this.splitContainer1.Panel2.Controls.Add(this.NText);
-            this.splitContainer1.Panel2.Controls.Add(this.BText);
             this.splitContainer1.Panel2.Controls.Add(this.NErase);
             this.splitContainer1.Panel2.Controls.Add(this.BErase);
             this.splitContainer1.Panel2.Controls.Add(this.NPen);
@@ -107,9 +105,21 @@ namespace Pic2gether_
             this.splitContainer1.Panel2.Controls.Add(this.BFill);
             this.splitContainer1.Panel2.Controls.Add(this.NColor);
             this.splitContainer1.Panel2.Controls.Add(this.BColore);
-            this.splitContainer1.Size = new System.Drawing.Size(1143, 73);
-            this.splitContainer1.SplitterDistance = 523;
+            this.splitContainer1.Size = new System.Drawing.Size(1184, 73);
+            this.splitContainer1.SplitterDistance = 541;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // undo
+            // 
+            this.undo.BackgroundImage = global::Pic2gether_.Properties.Resources.undo;
+            this.undo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.undo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.undo.Location = new System.Drawing.Point(11, 13);
+            this.undo.Name = "undo";
+            this.undo.Size = new System.Drawing.Size(31, 29);
+            this.undo.TabIndex = 3;
+            this.undo.UseVisualStyleBackColor = true;
+            this.undo.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -260,38 +270,13 @@ namespace Pic2gether_
             // 
             // BColorLil
             // 
-            this.BColorLil.BackColor = System.Drawing.Color.White;
+            this.BColorLil.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BColorLil.Location = new System.Drawing.Point(55, 30);
             this.BColorLil.Name = "BColorLil";
             this.BColorLil.Size = new System.Drawing.Size(20, 20);
             this.BColorLil.TabIndex = 12;
             this.BColorLil.UseVisualStyleBackColor = false;
             this.BColorLil.Click += new System.EventHandler(this.BColorLilChange);
-            // 
-            // NText
-            // 
-            this.NText.AutoSize = true;
-            this.NText.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NText.Location = new System.Drawing.Point(283, 53);
-            this.NText.Name = "NText";
-            this.NText.Size = new System.Drawing.Size(37, 13);
-            this.NText.TabIndex = 11;
-            this.NText.Text = "Текст";
-            this.NText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // BText
-            // 
-            this.BText.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BText.BackgroundImage = global::Pic2gether_.Properties.Resources.Text;
-            this.BText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BText.Enabled = false;
-            this.BText.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BText.Location = new System.Drawing.Point(281, 10);
-            this.BText.Name = "BText";
-            this.BText.Size = new System.Drawing.Size(40, 40);
-            this.BText.TabIndex = 10;
-            this.BText.UseVisualStyleBackColor = false;
             // 
             // NErase
             // 
@@ -383,9 +368,9 @@ namespace Pic2gether_
             // 
             this.ZoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ZoomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ZoomPanel.Location = new System.Drawing.Point(0, 564);
+            this.ZoomPanel.Location = new System.Drawing.Point(0, 841);
             this.ZoomPanel.Name = "ZoomPanel";
-            this.ZoomPanel.Size = new System.Drawing.Size(1143, 20);
+            this.ZoomPanel.Size = new System.Drawing.Size(1184, 20);
             this.ZoomPanel.TabIndex = 2;
             this.ZoomPanel.UseWaitCursor = true;
             // 
@@ -395,7 +380,7 @@ namespace Pic2gether_
             this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Canva.Location = new System.Drawing.Point(0, 0);
             this.Canva.Name = "Canva";
-            this.Canva.Size = new System.Drawing.Size(1143, 584);
+            this.Canva.Size = new System.Drawing.Size(1184, 861);
             this.Canva.TabIndex = 0;
             this.Canva.TabStop = false;
             this.Canva.Paint += new System.Windows.Forms.PaintEventHandler(this.Canva_Paint);
@@ -409,10 +394,11 @@ namespace Pic2gether_
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1143, 584);
+            this.ClientSize = new System.Drawing.Size(1184, 861);
             this.Controls.Add(this.ZoomPanel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Canva);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -437,8 +423,6 @@ namespace Pic2gether_
         private System.Windows.Forms.Label NErase;
         private System.Windows.Forms.Button BErase;
         private System.Windows.Forms.Label NPen;
-        private System.Windows.Forms.Label NText;
-        private System.Windows.Forms.Button BText;
         private System.Windows.Forms.Button BColorLil;
         private System.Windows.Forms.Button bLine;
         private System.Windows.Forms.Button bRectangle;
@@ -451,6 +435,7 @@ namespace Pic2gether_
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bClear;
         private System.Windows.Forms.Button bSave;
+        private System.Windows.Forms.Button undo;
     }
 }
 

@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Color.ico" />
+    <None Include="Resources\undo.png" />
     <None Include="Resources\visibility.png" />
     <None Include="Resources\Line.png" />
     <None Include="Resources\Rectangle.png" />

@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System.Net;
-using System.Net.Sockets;
 
 namespace Pic2gether_
 {
@@ -20,24 +13,38 @@ namespace Pic2gether_
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             bm = new Bitmap(Canva.Width, Canva.Height);
             g = Graphics.FromImage(bm);
             g.Clear(Color.White);
             Canva.Image = bm;
+            undoList.Add(new Bitmap(bm));
         }
 
+        List<Bitmap> undoList = new List<Bitmap>();
         Bitmap bm;
         Graphics g;
         private bool isMouse = false;
         Point px, py;
         int index_Pen;
         int x, y, sX, sY, cX, cY;
+        int maxListSize = 5;
         Pen pencil = new Pen(Color.Black, 1);
         Brush pencilLIL = new SolidBrush(Color.Empty);
         Brush point = new SolidBrush(Color.Black);
         Pen erase = new Pen(Color.White, 30);
         Brush erase_pen = new SolidBrush(Color.White);
 
+        private void button2_Click(object sender, EventArgs e) // Undo
+        {
+            if (undoList.Count > 1)
+            {
+                undoList.RemoveAt(undoList.Count - 1);
+                bm = new Bitmap(undoList[undoList.Count - 1]);
+                g = Graphics.FromImage(bm);
+                Canva.Image = bm;
+            }
+        }
 
         private void ColorChange(object sender, EventArgs e)
         {
@@ -51,7 +58,6 @@ namespace Pic2gether_
 
         }
 
-
         private void BColorLilChange(object sender, EventArgs e)
         {
             if (ChColor.ShowDialog() == DialogResult.OK)
@@ -64,12 +70,12 @@ namespace Pic2gether_
 
         private void Canva_MouseDown(object sender, MouseEventArgs e)
         {
+
             isMouse = true;
             py = e.Location;
 
             cX = e.X;
             cY = e.Y;
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +101,7 @@ namespace Pic2gether_
 
         private void Canva_MouseUp(object sender, MouseEventArgs e)
         {
+
             isMouse = false;
 
             sX = x - cX;
@@ -127,6 +134,12 @@ namespace Pic2gether_
             if (index_Pen == 7)
             {
                 g.DrawLine(pencil, cX, cY, x, y);
+            }
+
+            undoList.Add(new Bitmap(bm));
+            if (undoList.Count > maxListSize)
+            {
+                undoList.RemoveAt(0);
             }
         }
 
@@ -222,18 +235,19 @@ namespace Pic2gether_
             pixel.Push(new Point(x, y));
             bm.SetPixel(x, y, new_color);
 
-            if (old_color == new_color) return;
-
-            while (pixel.Count > 0)
+            if (old_color.ToArgb() != new_color.ToArgb())
             {
-                Point pt = (Point)pixel.Pop();
-                if (pt.X>0 && pt.Y>0 && pt.X<bm.Width-1 && pt.Y<bm.Height-1)
+                while (pixel.Count > 0)
                 {
-                    validate(bm, pixel, pt.X - 1, pt.Y, old_color, new_color);
-                    validate(bm, pixel, pt.X, pt.Y - 1, old_color, new_color);
-                    validate(bm, pixel, pt.X + 1, pt.Y, old_color, new_color);
-                    validate(bm, pixel, pt.X, pt.Y + 1, old_color, new_color);
+                    Point pt = (Point)pixel.Pop();
+                    if (pt.X > 0 && pt.Y > 0 && pt.X < bm.Width - 1 && pt.Y < bm.Height - 1)
+                    {
+                        validate(bm, pixel, pt.X - 1, pt.Y, old_color, new_color);
+                        validate(bm, pixel, pt.X, pt.Y - 1, old_color, new_color);
+                        validate(bm, pixel, pt.X + 1, pt.Y, old_color, new_color);
+                        validate(bm, pixel, pt.X, pt.Y + 1, old_color, new_color);
 
+                    }
                 }
             }
         }
@@ -252,6 +266,7 @@ namespace Pic2gether_
             {
                 Point point = set_point(Canva, e.Location);
                 Fill(bm, point.X, point.Y, BColorLil.BackColor);
+
             }
         }
 
@@ -290,8 +305,6 @@ namespace Pic2gether_
             y = e.Y;
             sX = e.X-cX;
             sY = e.Y-cY;
-
-
            }
 
         private void bClear_Click(object sender, EventArgs e)
@@ -300,7 +313,6 @@ namespace Pic2gether_
             Canva.Image = bm;
             index_Pen = 0;
         }
-
 
         private void bSave_Click(object sender, EventArgs e)
         {
